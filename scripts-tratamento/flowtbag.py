@@ -231,15 +231,3 @@ if __name__ == '__main__':
     log.debug("Flowtbag begin")
     Flowtbag(args.capture_file)
     log.debug("Flowtbag end")
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-API
-Training
-Shop
-Blog
-About
