@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @tinchoa
- Sign out
- Unwatch 2
-  Star 1  Fork 1 tinchoa/catraca
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-Branch: master Find file Copy pathcatraca/capture-layer/flowtbag.py
-a4a2e60  on 21 Aug 2017
-@tinchoa tinchoa layers
-1 contributor
-RawBlameHistory     
-242 lines (217 sloc)  8.74 KB
 #!/usr/bin/python
 
 '''
