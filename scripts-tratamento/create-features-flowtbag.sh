@@ -1,20 +1,23 @@
 #!/bin/bash
 
+#create-features-flowtbag.sh abstrai os pcaps em 40 features
+
 path=$(pwd)
-arquivo=$path/folders
-saida=$path/features.out
+dates=date-folders.txt
 
-while read -r line
+while read -r line1 #A cada loop, atribui o valor de cada data no arquivo "dates"a variável line1
 do
-        f="$line"
-        a="$(ls $f |grep pcap)"
-        echo 'analizing file '$a
-        # mkdir $v2
-        echo $path'/'$f'/'$a
-        flowtbag $path'/'$f'/'$a  > /tmp/24/flowtbag.out
-        cat /tmp/24/flowtbag.out >>$saida
-
- done < "$arquivo"
-
-
-
+    f="$line1" #atribui as datas a variável "f"
+    dumps=$path/$f/dump-folders.txt
+    saida=$path/$f/features.out
+    echo 'entering folder '$f
+    while read -r line2 #A cada loop, atribui o valor de cada pcap a variavel line2
+    do
+	    g="$line2"
+	    echo '----entering folder '$g
+	    pcap="$(ls $f/$g | grep pcap)" # retorna o nome do pcap que será analisado
+	    echo '--------analyzing file '$pcap
+	    flowtbag $path'/'$f'/'$g'/'$pcap > /tmp/flowtbag.out #comando que abstrai os pcaps em 40 feactures e apresenta um arquivo csv como saída
+	    cat /tmp/flowtbag.out >> $saida #escreve o arquivo csv num arquivo de saída que contem todos os outros arquivos csv com a mesma data dos pcaps
+    done < "$dumps"
+done < "$dates"
