@@ -42,11 +42,11 @@ furg_cnt NUMERIC
 burg_cnt NUMERIC         
 total_fhlen NUMERIC      
 total_bhlen NUMERIC      
-dscp NUMERIC'''          
+dscp NUMERIC'''     # string que serve  marcador para cada feature no arquivo features.out
                          
-b = {}                   
-a = a.split("\n")        
-for i in range(len(a)):  
-    b[a[i].split()[0]]=i 
+b = {} # criando um dicionario vazio                  
+a = a.split("\n")  # transforma a string em uma lista onde cada campo e uma linha     
+for i in range(len(a)):
+    b[a[i].split()[0]]=i # atribui a chave do dicionario o primeiro campo da string "a" de cada linha e o valor passa a ser o numero da "linha - 1"
 for key in b:            
-    exec(key + '=b[key]')
+    exec(key + '=b[key]') # atribui a variavel com o nome da chave ao referente numero que ela se encontra na "linha -1"

@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/bin/bash -x
 
-FILES=/home/diogo/170222-dataset
-pathstrip=/home/diogo/stripe/
+FILES=/tmp
+pathstrip=/home/airam/stripe
 #netAI-rules-stats-ni.xml
 
-
-for f in *.pcap*
+for f in $FILES/dump.pcap* #atribui o valor da variável "f" a cada arquivo pcap na pasta tmp
 do
-   echo 'analizing file '$f
-   $pathstrip/stripe -r $f -w $FILES/nPPoe/$f
-done
+   file="${f##*/}" # Atribui o valor da variável file ao nome do arquivo "dump.pcapxxx"
+   echo 'analizing file '$file
+   $pathstrip/stripe -r $f -w $(pwd)/$file # Remove o PPoE do arquivo dump.pcapxxx e
+done                                       #envia o(s) arquivo(s) a pasta com o mesmo nome do                                           #determinado pcap em análise   
