@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
 FILES=/tmp
-pathstrip=/home/airam/stripe
+pathstrip=/home/stripe
 #netAI-rules-stats-ni.xml
 
 for f in $FILES/dump.pcap* #atribui o valor da variável "f" a cada arquivo pcap na pasta tmp
