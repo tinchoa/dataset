@@ -16,12 +16,12 @@ do
 	mkdir $path/$v2				# cria um diretório com o valor da variável v2
 
 	# Suricata 4.0.3
-	suricata -c /etc/suricata/suricata-2.yaml -r $path/$f -l $path/$v2 -v	# roda o suricata e move os logs para a pasta "v2"
+	suricata -c /etc/suricata/suricata.yaml -r $path/$f -l $path/$v2 -v	# roda o suricata e move os logs para a pasta "v2"
 
 	# Suricata 3.1
 	#/root/suricata-3.1/src/suricata -c /usr/local/etc/suricata/suricata-3.yaml -r $path/$f -l $v2 -v	# roda o suricata e move os logs para a pasta "v2"
 	
-	cp $f $v2				# copia o arquivo com nome da variável f, com nome de v2
+	mv $path/$f $path/$v2				# copia o arquivo com nome da variável f, com nome de v2
 	#mv $pathlogs/* $v2			# move os arquivos logs para o diretório v2
 
 done < "$arquivo"				# a variavel line se refere a cada linha da variavel "arquivo" que representa um arquivo
