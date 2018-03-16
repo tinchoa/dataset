@@ -1,10 +1,11 @@
 #!/bin/bash
 
-path=$(pwd)					# variável que assume o valor do diretório atual
+#path=$(pwd)					# variável que assume o valor do diretório atual
+path=$1
 pathlogs=/usr/local/var/log/suricata		# variável que assume o valor do diretório suricata (guaratiba)
-ls $path -1 | grep dump.pcap > $path/new2       # copia o conteudo antes do ">" para o arquivo "new2" dentro do diretório "$PATH"
+ls $path -1 | grep dump* > $path/new2       # copia o conteudo antes do ">" para o arquivo "new2" dentro do diretório "$PATH"
 arquivo=$path/new2				# variável que assume o valor do arquivo atual/new2
-rm new
+#rm new
 
 while read -r line				# loop para ler as linhas do arquivo 
 do
@@ -12,10 +13,10 @@ do
 	echo 'analizing file '$f		# o F é maiúsculo mesmo?	
 	v2=${f/.}				# Retira o ponto do arquivo pcap para se tornar valor da variável "v2"
 	echo "$v2" >> $path/new
-	mkdir $v2				# cria um diretório com o valor da variável v2
+	mkdir $path/$v2				# cria um diretório com o valor da variável v2
 
 	# Suricata 4.0.3
-	suricata -c /etc/suricata/suricata-4.0.3/suricata.yaml -r $path/$f -l $v2 -v	# roda o suricata e move os logs para a pasta "v2"
+	suricata -c /etc/suricata/suricata-2.yaml -r $path/$f -l $path/$v2 -v	# roda o suricata e move os logs para a pasta "v2"
 
 	# Suricata 3.1
 	#/root/suricata-3.1/src/suricata -c /usr/local/etc/suricata/suricata-3.yaml -r $path/$f -l $v2 -v	# roda o suricata e move os logs para a pasta "v2"
