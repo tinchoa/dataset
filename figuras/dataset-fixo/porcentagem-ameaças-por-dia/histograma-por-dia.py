@@ -1,4 +1,6 @@
 '''
+all files are originally in @sepetiba:/home/dataset/nPPoe
+
 this script will take the relation in % of flows atacks in each day
 
 Output is a csv with the porcentage of flows :
@@ -9,7 +11,7 @@ import pandas as pd
 import numpy as np
 
 
-dias=['classes-16.out','classes-17.out','classes-18.out','classes-19.out','classes-20.out','classes-21.out','classes-27.out']
+dias=['classes-16.out','classes-17.out','classes-18.out','classes-19.out','classes-20.out','classes-21.out','classes-24.out','classes-25.out','classes-26.out','classes-27.out','classes-28.out','classes-01.out','classes-02.out','classes-03.out']
 
 porcentages={}
 
