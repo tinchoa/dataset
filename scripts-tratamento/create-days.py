@@ -8,7 +8,7 @@ file=open(path+'new','r')                           # abre-se o arquivo "new2" p
 newFile=open(path+'date-folders.txt','w')
 
 date=[]
-b=open(path+'new2','r')
+b=open(path+'new2-bk','r')
 a=b.readlines()
 index=8
 for i in range(len(a)):

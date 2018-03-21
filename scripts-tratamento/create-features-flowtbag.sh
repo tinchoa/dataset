@@ -17,7 +17,7 @@ do
 	    echo '----entering folder '$g
 	    pcap="$(ls $path/$f/$g | grep pcap)" # retorna o nome do pcap que será analisado
 	    echo '--------analyzing file '$pcap
-	    echo '--------analyzing file '$pcap >$path/log-flowtbag.txt
+	    echo '--------analyzing file '$pcap >>$path/log-flowtbag.txt
 	    flowtbag $path'/'$f'/'$g'/'$pcap > /tmp/flowtbag.out #comando que abstrai os pcaps em 40 feactures e apresenta um arquivo csv como saída
 	    cat /tmp/flowtbag.out >> $saida #escreve o arquivo csv num arquivo de saída que contem todos os outros arquivos csv com a mesma data dos pcaps
     done < "$dumps"

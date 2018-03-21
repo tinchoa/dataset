@@ -3,19 +3,20 @@ import json, os
 fmt='%Y-%m-%dT%H:%M:%S.%f-0200'
 from dateutil.parser import parse
 from datetime import datetime
-import csv
+import csv,sys
 
 #arquivo=open('eve-test.json','r')
 
 # aqui se usa um loop de for para entrar nas pastas de cada dia 
-dates = open("date-folders.txt", "r")
+path=sys.argv[1]
+dates = open(path+"date-folders.txt", "r")
 a = dates.readlines()
 for i in range(len(a)):
 
     a[i]=a[i].replace('\n','')
-    arquivo=open(a[i]+'/json-all.json','r')
-    w = csv.writer(open(a[i]+"/output.csv", "w"))
-    file2 = open(a[i]+"/times.txt", "w")
+    arquivo=open(path+a[i]+'/json-all.json','r')
+    w = csv.writer(open(path+a[i]+"/output.csv", "w"))
+    file2 = open(path+a[i]+"/times.txt", "w")
 
     lines=arquivo.readlines()
 

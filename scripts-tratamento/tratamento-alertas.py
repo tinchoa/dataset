@@ -1,12 +1,14 @@
+import sys
 from datetime import datetime
 fmt="%m/%d/%Y-%H:%M:%S.%f"
 
-dates = open("date-folders.txt", "r")
+path=sys.argv[1]
+dates = open(path+"date-folders.txt", "r")
 folder = dates.readlines()
 for i in range(len(folder)):
     
     folder[i]=folder[i].replace('\n','')
-    file = open(folder[i]+"/alertas-all.log","r")
+    file = open(path+folder[i]+"/alertas-all.log","r")
     linha = file.readline()
     alerts = []
     while linha:
@@ -14,7 +16,7 @@ for i in range(len(folder)):
         alerts.append(a)
         linha = file.readline()
 
-    newFile = open(folder[i]+"/dictionaries.txt", "w")
+    newFile = open(path+folder[i]+"/dictionaries.txt", "w")
 
     tipoDeAlerta= {}
 
