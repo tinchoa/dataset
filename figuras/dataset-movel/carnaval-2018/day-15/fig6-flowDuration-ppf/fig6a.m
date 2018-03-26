@@ -7,5 +7,5 @@ durationNormal = csvread('saidapacektNumberNormalFor.csv');
 [f,x] = ecdf(durationNormal(:,2));
 plot(f,'g')
 xlim([0 100])
-ylabel('Cumulative Distribution Function (CDF)');
+ylabel('Cumulative Distribution (CDF)');
 xlabel('Packets Number');
