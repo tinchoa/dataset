@@ -1,7 +1,10 @@
 import pandas as pd
 import numpy as np
+import sys
 
-arquivo=open('classes-17.out')
+
+arquivo=open(sys.argv[1])
+
 
 df=pd.read_csv(arquivo,header=None)
 ataques=df.loc[df[45] != 0]
@@ -139,16 +142,16 @@ a=normal.loc[:,10]
 a.to_csv('saidaBytesNormalDown.csv')
 
 #no matlab
-figure
-durationAttack = csvread('saidaBytesAttackDown.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaBytesNormalDown.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 200])
-ylim([0 1])
+# figure
+# durationAttack = csvread('saidaBytesAttackDown.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaBytesNormalDown.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 200])
+# ylim([0 1])
 
 
 
@@ -157,23 +160,23 @@ ylim([0 1])
 
 #ataques
 a=ataques.loc[:,6]
-a.to_csv('saidapacektNumberAttackFor.csv')
+a.to_csv('saidaFlowSizeFor.csv')
 
 #normal
 a=normal.loc[:,6] 
-a.to_csv('saidapacektNumberNormalFor.csv')
+a.to_csv('saidaFlowSizeBack.csv')
 
 
 #no matlab
-figure
-durationAttack = csvread('saidapacektNumberAttackFor.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidapacektNumberNormalFor.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 100])
+# figure
+# durationAttack = csvread('saidaFlowSizeFor.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaFlowSizeBack.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 100])
 
 
 
@@ -188,16 +191,16 @@ a=normal.loc[:,7]
 a.to_csv('saidaBytesNormalDown.csv')
 
 #no matlab
-figure
-durationAttack = csvread('saidaBytesAttackDown.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaBytesNormalDown.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 1000])
-ylim([0 1])
+# figure
+# durationAttack = csvread('saidaBytesAttackDown.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaBytesNormalDown.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 1000])
+# ylim([0 1])
 
 
 
@@ -213,15 +216,15 @@ a.to_csv('saidaSubFlowBytesNormalFor.csv')
 
 
 #no matlab
-figure
-durationAttack = csvread('saidaSubFlowBytesAttackFor.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaSubFlowBytesNormalFor.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 1000])
+# figure
+# durationAttack = csvread('saidaSubFlowBytesAttackFor.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaSubFlowBytesNormalFor.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 1000])
 
 
 
@@ -236,16 +239,16 @@ a=normal.loc[:,37]
 a.to_csv('saidaSubFlowBytesNormalDown.csv')
 
 #no matlab
-figure
-durationAttack = csvread('saidaSubFlowBytesAttackDown.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaSubFlowBytesNormalDown.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 1000])
-ylim([0 1])
+# figure
+# durationAttack = csvread('saidaSubFlowBytesAttackDown.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaSubFlowBytesNormalDown.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 1000])
+# ylim([0 1])
 
 
 
@@ -262,15 +265,15 @@ a.to_csv('saidaBytesHeaderNormalFor.csv')
 
 
 #no matlab
-figure
-durationAttack = csvread('saidaBytesHeaderAttackFor.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaBytesHeaderNormalFor.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 1000])
+# figure
+# durationAttack = csvread('saidaBytesHeaderAttackFor.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaBytesHeaderNormalFor.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 1000])
 
 
 
@@ -285,15 +288,15 @@ a=normal.loc[:,43]
 a.to_csv('saidaBytesHeaderNormalDown.csv')
 
 #no matlab
-figure
-durationAttack = csvread('saidaBytesHeaderAttackDown.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaBytesHeaderNormalDown.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 1000])
-ylim([0 1])
+# figure
+# durationAttack = csvread('saidaBytesHeaderAttackDown.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaBytesHeaderNormalDown.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 1000])
+# ylim([0 1])
 
 
