@@ -74,14 +74,16 @@ a.to_csv('saidadurationNormal.csv')
 
 
 #no matlab
-figure
-durationAttack = csvread('saidadurationAttack.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidadurationNormal.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
+# figure
+# durationAttack = csvread('saidadurationAttack.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidadurationNormal.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('Flow Duration (ms)');
 
 
 ##figura 5 'b'
@@ -99,13 +101,13 @@ b.to_csv('saidaprotoNormal.csv')
 
 
 #no matlab
-figure
-protoAttack = csvread('saidaprotoAttack.csv');
-protoNormal = csvread('saidaprotoNormal.csv');
-values=[protoNormal(1,2),protoAttack(1,2);protoNormal(2,2),protoAttack(2,2)];
-bar(values);
-set(gca,'xticklabel',{'TCP';'UDP'})
-
+# figure
+# protoAttack = csvread('saidaprotoAttack.csv');
+# protoNormal = csvread('saidaprotoNormal.csv');
+# values=[protoNormal(1,2),protoAttack(1,2);protoNormal(2,2),protoAttack(2,2)];
+# bar(values);
+# set(gca,'xticklabel',{'TCP';'UDP'})
+# ylabel('Number of Flows');
 
 #figura 6 'a'
 
@@ -119,16 +121,17 @@ a.to_csv('saidapacektNumberNormalFor.csv')
 
 
 #no matlab
-figure
-durationAttack = csvread('saidapacektNumberAttackFor.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidapacektNumberNormalFor.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 100])
-
+# figure
+# durationAttack = csvread('saidapacektNumberAttackFor.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidapacektNumberNormalFor.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 100])
+# ylabel('Cumulative Distribution Function (CDF)');
+# xlabel('Packets Number');
 
 
 #figura 6 'b'
@@ -142,17 +145,18 @@ a=normal.loc[:,10]
 a.to_csv('saidaBytesNormalDown.csv')
 
 #no matlab
-figure
-durationAttack = csvread('saidaBytesAttackDown.csv');
-[f,x] = ecdf(durationAttack(:,2));
-plot(f,'r')
-hold on
-durationNormal = csvread('saidaBytesNormalDown.csv');
-[f,x] = ecdf(durationNormal(:,2));
-plot(f,'g')
-xlim([0 200])
-ylim([0 1])
-
+# figure
+# durationAttack = csvread('saidaBytesAttackDown.csv');
+# [f,x] = ecdf(durationAttack(:,2));
+# plot(f,'r')
+# hold on
+# durationNormal = csvread('saidaBytesNormalDown.csv');
+# [f,x] = ecdf(durationNormal(:,2));
+# plot(f,'g')
+# xlim([0 200])
+# ylim([0 1])
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('Bytes per Flow');
 
 
 
@@ -177,7 +181,8 @@ a.to_csv('saidaFlowSizeBack.csv')
 # [f,x] = ecdf(durationNormal(:,2));
 # plot(f,'g')
 # xlim([0 100])
-
+# xlabel('Flow Size (Byte)');
+# ylabel('Cumulative Distribution (CDF)');
 
 
 #figura 7 'b'
@@ -201,6 +206,8 @@ a.to_csv('saidaFlowSizeBytesNormalDown.csv')
 # plot(f,'g')
 # xlim([0 1000])
 # ylim([0 1])
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('Flow Size (Byte)');
 
 
 
@@ -225,6 +232,8 @@ a.to_csv('saidaSubFlowBytesNormalFor.csv')
 # [f,x] = ecdf(durationNormal(:,2));
 # plot(f,'g')
 # xlim([0 1000])
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('SubFlows Size (Bytes)');
 
 
 
@@ -249,7 +258,8 @@ a.to_csv('saidaSubFlowBytesNormalDown.csv')
 # plot(f,'g')
 # xlim([0 1000])
 # ylim([0 1])
-
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('SubFlows Size (Bytes)');
 
 
 
@@ -274,6 +284,8 @@ a.to_csv('saidaBytesHeaderNormalFor.csv')
 # [f,x] = ecdf(durationNormal(:,2));
 # plot(f,'g')
 # xlim([0 1000])
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('Total bytes used in headers (Bytes)');
 
 
 
@@ -298,5 +310,5 @@ a.to_csv('saidaBytesHeaderNormalDown.csv')
 # plot(f,'g')
 # xlim([0 1000])
 # ylim([0 1])
-
-
+# ylabel('Cumulative Distribution (CDF)');
+# xlabel('Total bytes used in headers (Bytes)');

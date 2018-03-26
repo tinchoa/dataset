@@ -1,7 +1,10 @@
 figure
-protoAttack = csvread('saidaprotoAttack.csv');
-protoNormal = csvread('saidaprotoNormal.csv');
-values=[protoNormal(1,2),protoAttack(1,2);protoNormal(2,2),protoAttack(2,2)];
-bar(values);
-set(gca,'xticklabel',{'TCP';'UDP'})
-ylabel('Number of Flows');
+durationAttack = csvread('saidadurationAttack.csv');
+[f,x] = ecdf(durationAttack(:,2));
+plot(f,'r')
+hold on
+durationNormal = csvread('saidadurationNormal.csv');
+[f,x] = ecdf(durationNormal(:,2));
+plot(f,'g')
+ylabel('Cumulative Distribution (CDF)');
+xlabel('Flow Duration (ms)');
