@@ -1,0 +1,16 @@
+figure
+formatSpec = '%s%f%f%f%f%[^\n\r]';
+delimiter = ',';
+fileID = fopen('porcentage.csv','r');
+dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter,  'ReturnOnError', false);
+fclose(fileID);
+day = dataArray{:, 1};
+day=['Day 09';'Day 10';'Day 11';'Day 12';'Day 13';'Day 14';'Day 15'];
+totalFlows = dataArray{:, 2};
+ataques = dataArray{:, 3};
+normal = dataArray{:, 4};
+porcentageAttacks = dataArray{:, 5};
+bar(porcentageAttacks)
+set(gca,'xticklabel',day)
+ylabel('Percentage of Threats');
+ylim([0 10])
