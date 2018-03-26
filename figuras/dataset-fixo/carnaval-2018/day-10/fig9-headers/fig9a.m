@@ -1,9 +1,9 @@
 figure
-durationAttack = csvread('saidaBytesHeaderAttackFor.csv');
+durationAttack = csvread('fig9a-saidaBytesHeaderAttackFor.csv');
 [f,x] = ecdf(durationAttack(:,2));
 plot(f,'r')
 hold on
-durationNormal = csvread('saidaBytesHeaderNormalFor.csv');
+durationNormal = csvread('fig9a-saidaBytesHeaderNormalFor.csv');
 [f,x] = ecdf(durationNormal(:,2));
 plot(f,'g')
 xlim([0 1000])
