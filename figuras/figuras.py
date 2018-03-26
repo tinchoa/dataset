@@ -237,9 +237,9 @@ a.to_csv('fig8a-saidaSubFlowBytesNormalFor.csv')
 
 
 
-#figura 8 'b'
+# #figura 8 'b'
 
-#ataques
+# #ataques
 a=ataques.loc[:,37]
 a.to_csv('fig8b-saidaSubFlowBytesAttackDown.csv')
 
@@ -247,25 +247,25 @@ a.to_csv('fig8b-saidaSubFlowBytesAttackDown.csv')
 a=normal.loc[:,37] 
 a.to_csv('fig8b-saidaSubFlowBytesNormalDown.csv')
 
-#no matlab
-# figure
-# durationAttack = csvread('fig8b-saidaSubFlowBytesAttackDown.csv');
-# [f,x] = ecdf(durationAttack(:,2));
-# plot(f,'r')
-# hold on
-# durationNormal = csvread('fig8b-saidaSubFlowBytesNormalDown.csv');
-# [f,x] = ecdf(durationNormal(:,2));
-# plot(f,'g')
-# xlim([0 1000])
-# ylim([0 1])
-# ylabel('Cumulative Distribution (CDF)');
-# xlabel('SubFlows Size (Bytes)');
+# #no matlab
+# # figure
+# # durationAttack = csvread('fig8b-saidaSubFlowBytesAttackDown.csv');
+# # [f,x] = ecdf(durationAttack(:,2));
+# # plot(f,'r')
+# # hold on
+# # durationNormal = csvread('fig8b-saidaSubFlowBytesNormalDown.csv');
+# # [f,x] = ecdf(durationNormal(:,2));
+# # plot(f,'g')
+# # xlim([0 1000])
+# # ylim([0 1])
+# # ylabel('Cumulative Distribution (CDF)');
+# # xlabel('SubFlows Size (Bytes)');
 
 
 
-#figura 9 'a'
+# #figura 9 'a'
 
-#ataques
+# #ataques
 a=ataques.loc[:,42]
 a.to_csv('fig9a-saidaBytesHeaderAttackFor.csv')
 
@@ -274,24 +274,24 @@ a=normal.loc[:,42]
 a.to_csv('fig9a-saidaBytesHeaderNormalFor.csv')
 
 
-#no matlab
-# figure
-# durationAttack = csvread('fig9a-saidaBytesHeaderAttackFor.csv');
-# [f,x] = ecdf(durationAttack(:,2));
-# plot(f,'r')
-# hold on
-# durationNormal = csvread('fig9a-saidaBytesHeaderNormalFor.csv');
-# [f,x] = ecdf(durationNormal(:,2));
-# plot(f,'g')
-# xlim([0 1000])
-# ylabel('Cumulative Distribution (CDF)');
-# xlabel('Total bytes used in headers (Bytes)');
+# #no matlab
+# # figure
+# # durationAttack = csvread('fig9a-saidaBytesHeaderAttackFor.csv');
+# # [f,x] = ecdf(durationAttack(:,2));
+# # plot(f,'r')
+# # hold on
+# # durationNormal = csvread('fig9a-saidaBytesHeaderNormalFor.csv');
+# # [f,x] = ecdf(durationNormal(:,2));
+# # plot(f,'g')
+# # xlim([0 1000])
+# # ylabel('Cumulative Distribution (CDF)');
+# # xlabel('Total bytes used in headers (Bytes)');
 
 
 
-#figura 9 'b'
+# #figura 9 'b'
 
-#ataques
+# #ataques
 a=ataques.loc[:,43]
 a.to_csv('fig9b-saidaBytesHeaderAttackDown.csv')
 
@@ -299,7 +299,7 @@ a.to_csv('fig9b-saidaBytesHeaderAttackDown.csv')
 a=normal.loc[:,43] 
 a.to_csv('fig9b-saidaBytesHeaderNormalDown.csv')
 
-#no matlab
+# #no matlab
 # figure
 # durationAttack = csvread('fig9b-saidaBytesHeaderAttackDown.csv');
 # [f,x] = ecdf(durationAttack(:,2));
