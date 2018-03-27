@@ -1,11 +1,11 @@
 figure
-durationAttack = csvread('saidapacektNumberAttackFor.csv');
+durationAttack = csvread('fig6a-saidapacektNumberAttackFor.csv');
 [f,x] = ecdf(durationAttack(:,2));
 plot(f,'r')
 hold on
-durationNormal = csvread('saidapacektNumberNormalFor.csv');
+durationNormal = csvread('fig6a-saidapacektNumberNormalFor.csv');
 [f,x] = ecdf(durationNormal(:,2));
 plot(f,'g')
 xlim([0 100])
-ylabel('Cumulative Distribution Function (CDF)');
+ylabel('Cumulative Distribution (CDF)');
 xlabel('Packets Number');
