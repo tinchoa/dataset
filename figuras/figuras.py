@@ -3,7 +3,7 @@ import numpy as np
 import sys
 
 
-arquivo=open(sys.argv[1])
+arquivo=open('classes.out')
 
 
 df=pd.read_csv(arquivo,header=None)
