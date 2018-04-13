@@ -12,7 +12,11 @@ totalFlows = dataArray{:, 2};
 ataques = dataArray{:, 3};
 normal = dataArray{:, 4};
 porcentageAttacks = dataArray{:, 5};
-bar(porcentageAttacks)
+%bar(porcentageAttacks)
+bar([ataques totalFlows],'stack')
 set(gca,'xticklabel',day)
-ylabel('Percentage of Threats');
-ylim([0 40])
+%ylabel('Percentage of Threats');
+ylabel('Number of Flows');
+legend('Alerts', 'Normal Traffic')
+%ylim([0 40])
+xtickangle(45)
