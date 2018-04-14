@@ -13,10 +13,10 @@ ataques = dataArray{:, 3};
 normal = dataArray{:, 4};
 porcentageAttacks = dataArray{:, 5};
 %bar(porcentageAttacks)
-bar([ataques totalFlows],'stack')
+bar([ataques  normal totalFlows],'stack')
 set(gca,'xticklabel',day)
 %ylabel('Percentage of Threats');
 ylabel('Number of Flows');
-legend('Alerts', 'Normal Traffic')
+legend('Alerts', 'Normal Traffic', 'Total Flows')
 %ylim([0 40])
 xtickangle(45)
