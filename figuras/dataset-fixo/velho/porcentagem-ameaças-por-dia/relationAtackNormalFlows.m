@@ -13,15 +13,20 @@ ataques = dataArray{:, 3};
 normal = dataArray{:, 4};
 porcentageAttacks = dataArray{:, 5};
 %bar(porcentageAttacks)
-bar(totalFlows);
+% bar(totalFlows);
+% hold on
+
+x=bar( normal)
+hatchfill2(x,'cross','HatchAngle',45);
 hold on
-bar( normal)
-hold on
-bar(ataques)
+%
+x=bar(ataques)
 hold off
 set(gca,'xticklabel',day)
 %ylabel('Percentage of Threats');
 ylabel('Number of Flows');
-legend( 'Total Flows', 'Normal Traffic','Alerts')
+%legend( 'Total Flows', 'Normal Traffic','Alerts')
+%legendflex({'Normal Traffic' 'Alerts'})
 %ylim([0 40])
+hatchfill2(x,'single','HatchAngle',0);
 xtickangle(45)

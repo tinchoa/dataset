@@ -3,7 +3,7 @@ import numpy as np
 import sys
 
 
-arquivo=open('classes.out')
+arquivo=open('classes-25.out')
 
 
 df=pd.read_csv(arquivo,header=None)
@@ -16,12 +16,12 @@ normal=df.loc[df[45] == 0]
 ###ataques
 a=ataques.loc[:,1] #todos as portas
 b=a.value_counts()
-b.to_csv('fig4a-saidaportsOrigenAttacks.csv')
+b.to_csv('figures/25/fig4a-saidaportsOrigenAttacks.csv')
 
 ###normal
 a=normal.loc[:,1]
 b=a.value_counts()
-b.to_csv('fig4a-saidaportsOrigenNormal.csv')
+b.to_csv('figures/25/fig4a-saidaportsOrigenNormal.csv')
 
 
 #no matlab
@@ -31,7 +31,7 @@ b.to_csv('fig4a-saidaportsOrigenNormal.csv')
 # bar(orgAttacks(:,1),orgAttacks(:,2),'r')
 # orgNormal = csvread('fig4a-saidaportsOrigenNormal.csv');
 # bar(orgNormal(:,1),orgNormal(:,2),'g')
-# xlim([0 1024])
+# xlim([0 1025])
 
 
 
@@ -40,7 +40,7 @@ b.to_csv('fig4a-saidaportsOrigenNormal.csv')
 ###ataques
 a=ataques.loc[:,3] #todos as portas
 b=a.value_counts()
-b.to_csv('fig4b-saidaportsDstAttacks.csv')
+b.to_csv('figures/25/fig4b-saidaportsDstAttacks.csv')
 
 
 
@@ -48,7 +48,7 @@ b.to_csv('fig4b-saidaportsDstAttacks.csv')
 ###normal
 a=normal.loc[:,3]
 b=a.value_counts()
-b.to_csv('fig4b-saidaportsDstNormal.csv')
+b.to_csv('figures/25/fig4b-saidaportsDstNormal.csv')
 
 
 #no matlab
@@ -58,7 +58,7 @@ b.to_csv('fig4b-saidaportsDstNormal.csv')
 # bar(dstAttacks(:,1),dstAttacks(:,2),'r')
 # dstNormal = csvread('fig4b-saidaportsDstNormal.csv');
 # bar(dstAttacks(:,1),dstAttacks(:,2),'g')
-# xlim([0 1024])
+# xlim([0 1025])
 
 
 
@@ -66,11 +66,11 @@ b.to_csv('fig4b-saidaportsDstNormal.csv')
 
 #ataques
 a=ataques.loc[:,25] 
-a.to_csv('fig5a-saidadurationAttack.csv')
+a.to_csv('figures/25/fig5a-saidadurationAttack.csv')
 
 #normal
 a=normal.loc[:,25] 
-a.to_csv('fig5a-saidadurationNormal.csv')
+a.to_csv('figures/25/fig5a-saidadurationNormal.csv')
 
 
 #no matlab
@@ -91,13 +91,13 @@ a.to_csv('fig5a-saidadurationNormal.csv')
 #ataques
 protoAtack=ataques.loc[:,4] #protocol
 b=protoAtack.value_counts()
-b.to_csv('fig5b-saidaprotoAttack.csv')
+b.to_csv('figures/25/fig5b-saidaprotoAttack.csv')
 
 
 #normal
 protoNormal=normal.loc[:,4] #protocol
 b=protoNormal.value_counts()
-b.to_csv('fig5b-saidaprotoNormal.csv')
+b.to_csv('figures/25/fig5b-saidaprotoNormal.csv')
 
 
 #no matlab
@@ -113,11 +113,11 @@ b.to_csv('fig5b-saidaprotoNormal.csv')
 
 #ataques
 a=ataques.loc[:,5]
-a.to_csv('fig6a-saidapacektNumberAttackFor.csv')
+a.to_csv('figures/25/fig6a-saidapacektNumberAttackFor.csv')
 
 #normal
 a=normal.loc[:,5] 
-a.to_csv('fig6a-saidapacektNumberNormalFor.csv')
+a.to_csv('figures/25/fig6a-saidapacektNumberNormalFor.csv')
 
 
 #no matlab
@@ -138,11 +138,11 @@ a.to_csv('fig6a-saidapacektNumberNormalFor.csv')
 
 #ataques
 a=ataques.loc[:,10]
-a.to_csv('fig6b-saidaBytesAttackDown.csv')
+a.to_csv('figures/25/fig6b-saidaBytesAttackDown.csv')
 
 #normal
 a=normal.loc[:,10] 
-a.to_csv('fig6b-saidaBytesNormalDown.csv')
+a.to_csv('figures/25/fig6b-saidaBytesNormalDown.csv')
 
 #no matlab
 # figure
@@ -164,11 +164,11 @@ a.to_csv('fig6b-saidaBytesNormalDown.csv')
 
 #ataques
 a=ataques.loc[:,6]
-a.to_csv('fig7a-saidaFlowSizeFor.csv')
+a.to_csv('figures/25/fig7a-saidaFlowSizeFor.csv')
 
 #normal
 a=normal.loc[:,6] 
-a.to_csv('fig7a-saidaFlowSizeBack.csv')
+a.to_csv('figures/25/fig7a-saidaFlowSizeBack.csv')
 
 
 #no matlab
@@ -189,11 +189,11 @@ a.to_csv('fig7a-saidaFlowSizeBack.csv')
 
 #ataques
 a=ataques.loc[:,7]
-a.to_csv('fig7b-saidaFlowSizeBytesAttackDown.csv')
+a.to_csv('figures/25/fig7b-saidaFlowSizeBytesAttackDown.csv')
 
 #normal
 a=normal.loc[:,7] 
-a.to_csv('fig7b-saidaFlowSizeBytesNormalDown.csv')
+a.to_csv('figures/25/fig7b-saidaFlowSizeBytesNormalDown.csv')
 
 #no matlab
 # figure
@@ -215,11 +215,11 @@ a.to_csv('fig7b-saidaFlowSizeBytesNormalDown.csv')
 
 #ataques
 a=ataques.loc[:,35]
-a.to_csv('fig8a-saidaSubFlowBytesAttackFor.csv')
+a.to_csv('figures/25/fig8a-saidaSubFlowBytesAttackFor.csv')
 
 #normal
 a=normal.loc[:,35] 
-a.to_csv('fig8a-saidaSubFlowBytesNormalFor.csv')
+a.to_csv('figures/25/fig8a-saidaSubFlowBytesNormalFor.csv')
 
 
 #no matlab
@@ -241,11 +241,11 @@ a.to_csv('fig8a-saidaSubFlowBytesNormalFor.csv')
 
 # #ataques
 a=ataques.loc[:,37]
-a.to_csv('fig8b-saidaSubFlowBytesAttackDown.csv')
+a.to_csv('figures/25/fig8b-saidaSubFlowBytesAttackDown.csv')
 
 #normal
 a=normal.loc[:,37] 
-a.to_csv('fig8b-saidaSubFlowBytesNormalDown.csv')
+a.to_csv('figures/25/fig8b-saidaSubFlowBytesNormalDown.csv')
 
 # #no matlab
 # # figure
@@ -267,11 +267,11 @@ a.to_csv('fig8b-saidaSubFlowBytesNormalDown.csv')
 
 # #ataques
 a=ataques.loc[:,42]
-a.to_csv('fig9a-saidaBytesHeaderAttackFor.csv')
+a.to_csv('figures/25/fig9a-saidaBytesHeaderAttackFor.csv')
 
 #normal
 a=normal.loc[:,42] 
-a.to_csv('fig9a-saidaBytesHeaderNormalFor.csv')
+a.to_csv('figures/25/fig9a-saidaBytesHeaderNormalFor.csv')
 
 
 # #no matlab
@@ -293,11 +293,11 @@ a.to_csv('fig9a-saidaBytesHeaderNormalFor.csv')
 
 # #ataques
 a=ataques.loc[:,43]
-a.to_csv('fig9b-saidaBytesHeaderAttackDown.csv')
+a.to_csv('figures/25/fig9b-saidaBytesHeaderAttackDown.csv')
 
 #normal
 a=normal.loc[:,43] 
-a.to_csv('fig9b-saidaBytesHeaderNormalDown.csv')
+a.to_csv('figures/25/fig9b-saidaBytesHeaderNormalDown.csv')
 
 # #no matlab
 # figure
