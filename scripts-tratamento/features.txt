@@ -42,4 +42,5 @@
 41,burg_cnt , The number of times the URG flag was set in packets travelling in the backward direction (0 for UDP)
 42,total_fhlen , The total bytes used for headers in the forward direction.
 43,total_bhlen , The total bytes used for headers in the backward direction.
-44,class, class label
+44,dscp ,
+45,class, class label
